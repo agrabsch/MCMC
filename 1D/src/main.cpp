@@ -8,10 +8,7 @@ using namespace std;
 
 const int N = 100 ;
 
-const int M = 10*N ;
-
-const int Nsamples = 10000 ;
-
+const int M = 20*N ;
 
 int main()
 {
@@ -19,8 +16,8 @@ int main()
   // generate N points
   MCMC sim(N) ;
 
-  // forget init cdt
-  sim.Iterate(2*M) ;
+  // forget init cdt: run M iterations
+  sim.Iterate(M) ;
 
   // output files
   ostringstream filename;
